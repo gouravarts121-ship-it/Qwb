@@ -1,0 +1,515 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+<meta name="theme-color" content="#f6efe6" />
+<title>Saksham — Clothing with soul.</title>
+<meta name="description" content="Saksham is a slow-clothing atelier from Jaipur. Handloom fabric, honest cuts and garments made to be worn for years, not seasons." />
+<meta property="og:title" content="Saksham — Clothing with soul." />
+<meta property="og:description" content="Handloom fabric, honest cuts, made to last." />
+<link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+<!-- ================= PRELOADER ================= -->
+<div class="preloader" id="preloader" aria-hidden="true">
+  <div class="preloader__inner">
+    <div class="preloader__mark">S</div>
+    <div class="preloader__row">
+      <span class="preloader__brand">Saksham</span>
+      <span class="preloader__count" id="loadCount">00</span>
+    </div>
+    <div class="preloader__bar"><i id="loadBar"></i></div>
+    <span class="preloader__note">Handloom · Jaipur · Since 2014</span>
+  </div>
+  <div class="preloader__curtain"></div>
+</div>
+
+<!-- ================= CURSOR ================= -->
+<div class="cursor-dot" aria-hidden="true"></div>
+<div class="cursor-ring" aria-hidden="true"><span>View</span></div>
+
+<!-- ================= HEADER ================= -->
+<header class="site-header" id="header">
+  <a class="brand" href="#top" aria-label="Saksham home">
+    <span class="brand__name">Saksham</span>
+    <span class="brand__reg">®</span>
+  </a>
+
+  <nav class="nav-desktop" aria-label="Primary">
+    <a href="#collection">Collection</a>
+    <a href="#suit3d">Fitting Room</a>
+    <a href="#atelier">Atelier</a>
+    <a href="#fabric">Fabric</a>
+    <a href="#journal">Journal</a>
+  </nav>
+
+  <div class="header-actions">
+    <a class="account-link" href="auth.html" data-account-label>Account</a>
+    <button class="sound-btn" id="soundBtn" aria-pressed="false" aria-label="Toggle ambient sound">
+      <span class="sound-btn__label">Sound</span>
+      <span class="sound-btn__state" id="soundState">Off</span>
+      <span class="sound-btn__bars" aria-hidden="true"><i></i><i></i><i></i><i></i></span>
+    </button>
+    <button class="menu-toggle" id="menuOpen" aria-expanded="false" aria-controls="menu">
+      <span class="menu-toggle__txt">Menu</span>
+      <span class="menu-toggle__lines" aria-hidden="true"><i></i><i></i></span>
+    </button>
+  </div>
+</header>
+
+<!-- ================= MENU ================= -->
+<div class="menu" id="menu" aria-hidden="true">
+  <div class="menu__bg"></div>
+  <div class="menu__inner">
+    <div class="menu__head">
+      <span class="menu__tag">Index</span>
+      <button class="menu__close" id="menuClose" aria-label="Close menu">
+        <span>Close</span><i aria-hidden="true"></i>
+      </button>
+    </div>
+
+    <div class="menu__grid">
+      <div class="menu__intro">
+        <p class="menu__intro-line">The house</p>
+        <p class="menu__intro-line">of <em>cloth</em></p>
+        <p class="menu__intro-copy">A slow-clothing atelier in Jaipur, weaving handloom fabric into garments meant to outlive trends.</p>
+      </div>
+
+      <nav class="menu__nav" aria-label="Menu">
+        <a class="menu__link" href="#collection"><span class="menu__idx">01</span><span class="menu__word">Collection</span></a>
+        <a class="menu__link" href="#suit3d"><span class="menu__idx">02</span><span class="menu__word">Fitting Room</span></a>
+        <a class="menu__link" href="#atelier"><span class="menu__idx">03</span><span class="menu__word">Atelier</span></a>
+        <a class="menu__link" href="#fabric"><span class="menu__idx">04</span><span class="menu__word">Fabric</span></a>
+        <a class="menu__link" href="#story"><span class="menu__idx">05</span><span class="menu__word">Our Story</span></a>
+        <a class="menu__link" href="#journal"><span class="menu__idx">06</span><span class="menu__word">Journal</span></a>
+        <a class="menu__link" href="#contact"><span class="menu__idx">07</span><span class="menu__word">Contact</span></a>
+      </nav>
+    </div>
+
+    <div class="menu__foot">
+      <div class="menu__foot-col">
+        <span class="label">Visit</span>
+        <p>14 Hawa Sadak, Civil Lines<br />Jaipur 302006, India</p>
+      </div>
+      <div class="menu__foot-col">
+        <span class="label">Write</span>
+        <p><a href="mailto:hello@saksham.studio">hello@saksham.studio</a><br /><a href="tel:+911412345678">+91 141 234 5678</a></p>
+      </div>
+      <div class="menu__foot-col">
+        <span class="label">Follow</span>
+        <p><a href="https://instagram.com/ugcsamex" target="_blank" rel="noopener noreferrer">Instagram</a><br /><a href="#">Pinterest</a></p>
+      </div>
+      <div class="menu__foot-col menu__foot-col--end">
+        <span class="label">© 2026 Saksham</span>
+        <p>Made by hand<br />in Rajasthan</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ================= HERO ================= -->
+<section class="hero" id="top">
+  <div class="hero__media">
+    <div class="hero__slide is-active" data-media="0"><span class="tex tex--clay"></span></div>
+    <div class="hero__slide" data-media="1"><span class="tex tex--indigo"></span></div>
+    <div class="hero__slide" data-media="2"><span class="tex tex--sage"></span></div>
+    <div class="hero__grain"></div>
+    <div class="hero__vignette"></div>
+  </div>
+
+  <div class="hero__content">
+    <div class="hero__eyebrow"><span class="dot"></span>Est. 2014 · Jaipur, India</div>
+
+    <div class="hero__titles">
+      <div class="hero__title is-active" data-title="0">
+        <h1 class="display">
+          <span class="line"><span>Saksham,</span></span>
+          <span class="line"><span>clothing with <em>soul.</em></span></span>
+        </h1>
+        <a class="pill" href="#atelier" data-cursor="View">
+          <span class="pill__txt">About the atelier</span>
+          <span class="pill__ico" aria-hidden="true">
+            <svg viewBox="0 0 20 20" fill="none"><path d="M3 10h13M11 4.5 16.5 10 11 15.5" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </span>
+        </a>
+      </div>
+
+      <div class="hero__title" data-title="1">
+        <h1 class="display">
+          <span class="line"><span>The first</span></span>
+          <span class="line"><span>handloom <em>atelier.</em></span></span>
+        </h1>
+        <a class="pill" href="#fabric" data-cursor="View">
+          <span class="pill__txt">Our fabric</span>
+          <span class="pill__ico" aria-hidden="true">
+            <svg viewBox="0 0 20 20" fill="none"><path d="M3 10h13M11 4.5 16.5 10 11 15.5" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </span>
+        </a>
+      </div>
+
+      <div class="hero__title" data-title="2">
+        <h1 class="display">
+          <span class="line"><span>There is a lot of</span></span>
+          <span class="line"><span>India in <em>every stitch.</em></span></span>
+        </h1>
+        <a class="pill" href="#story" data-cursor="View">
+          <span class="pill__txt">Our story</span>
+          <span class="pill__ico" aria-hidden="true">
+            <svg viewBox="0 0 20 20" fill="none"><path d="M3 10h13M11 4.5 16.5 10 11 15.5" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </span>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <div class="hero__chapters" aria-label="Chapters">
+    <button class="hero__chapter is-active" data-goto="0"><b>01</b><span>Clothing with soul</span></button>
+    <button class="hero__chapter" data-goto="1"><b>02</b><span>The handloom atelier</span></button>
+    <button class="hero__chapter" data-goto="2"><b>03</b><span>India in every stitch</span></button>
+  </div>
+
+  <div class="hero__scroll" aria-hidden="true"><span>Scroll</span><i></i></div>
+</section>
+
+<!-- ================= MARQUEE ================= -->
+<div class="marquee" aria-hidden="true">
+  <div class="marquee__track" id="marqueeTrack">
+    <span>The Kurta</span><span class="dot">·</span>
+    <span>Handloom Shirt</span><span class="dot">·</span>
+    <span>Nehru Jacket</span><span class="dot">·</span>
+    <span>Dhoti Trouser</span><span class="dot">·</span>
+    <span>Silk Scarf</span><span class="dot">·</span>
+    <span>Wool Shawl</span><span class="dot">·</span>
+    <span>Linen Overshirt</span><span class="dot">·</span>
+    <span>Khadi Tee</span><span class="dot">·</span>
+  </div>
+</div>
+
+<!-- ================= MANIFESTO ================= -->
+<section class="manifesto" id="manifesto">
+  <div class="manifesto__grid">
+    <span class="label manifesto__label" data-reveal>01 — Manifesto</span>
+    <p class="manifesto__statement" data-reveal>
+      We make <em>fewer, better</em> clothes. Cut by hand, dyed with earth,
+      and built to be repaired rather than replaced — so the wardrobe you
+      own becomes the one you <em>keep.</em>
+    </p>
+  </div>
+</section>
+
+<!-- ================= ATELIER / STICKY STORY ================= -->
+<section class="story" id="atelier">
+  <div class="story__media">
+    <div class="story__frames">
+      <div class="story__frame is-active" data-frame="0"><span class="tex tex--clay"></span><span class="story__frame-tag">Handloom, 2026</span></div>
+      <div class="story__frame" data-frame="1"><span class="tex tex--indigo"></span><span class="story__frame-tag">Indigo vat, Jaipur</span></div>
+      <div class="story__frame" data-frame="2"><span class="tex tex--sage"></span><span class="story__frame-tag">Block print, Bagru</span></div>
+    </div>
+    <div class="story__counter"><span id="storyNow">01</span><i></i><span>03</span></div>
+  </div>
+
+  <div class="story__text">
+    <article class="story__article" data-article="0">
+      <span class="label">02 — The Atelier</span>
+      <h2 class="display display--md"><span class="line"><span>Made by hand,</span></span><span class="line"><span>not by <em>haste.</em></span></span></h2>
+      <p>Every Saksham piece begins on a wooden loom in Rajasthan. Our weavers set the warp by hand, one thread at a time, before a single metre of cloth exists. Nothing is rushed; the loom decides the pace.</p>
+      <a class="link-arrow" href="#fabric" data-cursor="Read"><span>Meet the makers</span><i aria-hidden="true"></i></a>
+    </article>
+
+    <article class="story__article" data-article="1">
+      <span class="label">03 — The Vat</span>
+      <h2 class="display display--md"><span class="line"><span>Colour that</span></span><span class="line"><span>comes from <em>earth.</em></span></span></h2>
+      <p>Indigo, madder root, pomegranate rind. Our dyes are fermented in open vats and fixed with sunlight, so each garment carries a slightly different depth — a fingerprint of the day it was made.</p>
+      <a class="link-arrow" href="#fabric" data-cursor="Read"><span>See the palette</span><i aria-hidden="true"></i></a>
+    </article>
+
+    <article class="story__article" data-article="2">
+      <span class="label">04 — The Print</span>
+      <h2 class="display display--md"><span class="line"><span>Patterns pressed</span></span><span class="line"><span>by <em>human hands.</em></span></span></h2>
+      <p>Our block prints are carved from teak and stamped one impression at a time. Small misalignments are not flaws — they are the signature of a person, not a machine.</p>
+      <a class="link-arrow" href="#collection" data-cursor="Shop"><span>Shop the prints</span><i aria-hidden="true"></i></a>
+    </article>
+  </div>
+</section>
+
+<!-- ================= FITTING ROOM / 3D SUIT ================= -->
+<section class="suit3d" id="suit3d">
+  <div class="suit3d__head">
+    <span class="label" data-reveal>The Fitting Room</span>
+    <h2 class="display display--lg" data-reveal><span class="line"><span>Cloth, in</span></span><span class="line"><span>three <em>dimensions.</em></span></span></h2>
+    <p class="suit3d__lede" data-reveal>Drag the suit. Turn it in the light. Every colourway below was dyed in our Jaipur vats — pick one and watch the jacket change its mind.</p>
+  </div>
+
+  <div class="suit3d__stage" id="suitStage" data-reveal>
+    <canvas id="suitCanvas" role="img" aria-label="Interactive 3D suit jacket on a wooden hanger. Drag to rotate, scroll or pinch to zoom."></canvas>
+    <div class="suit3d__hotspots" id="suitHotspots"></div>
+    <div class="suit3d__hint" id="suitHint"><i></i><span>Drag to orbit · Scroll or pinch to zoom</span></div>
+    <div class="suit3d__info" id="suitInfo">
+      <span class="suit3d__info-tag"></span>
+      <p class="suit3d__info-title"></p>
+      <p class="suit3d__info-copy"></p>
+    </div>
+  </div>
+
+  <div class="suit3d__tray" data-reveal>
+    <span class="suit3d__tray-label">Dye vat</span>
+    <div class="suit3d__swatches" id="suitSwatches" aria-label="Fabric colourways"></div>
+    <span class="suit3d__fabric-name" id="suitFabricName">Indigo vat</span>
+  </div>
+</section>
+
+<!-- ================= COLLECTION RAIL ================= -->
+<section class="collection" id="collection">
+  <div class="collection__head">
+    <div>
+      <span class="label" data-reveal>05 — The Collection</span>
+      <h2 class="display display--lg" data-reveal><span class="line"><span>Eight pieces.</span></span><span class="line"><span>Endless <em>wear.</em></span></span></h2>
+    </div>
+    <div class="collection__controls">
+      <button class="rail-btn" id="railPrev" aria-label="Previous">
+        <svg viewBox="0 0 20 20" fill="none"><path d="M17 10H4M9 4.5 3.5 10 9 15.5" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </button>
+      <button class="rail-btn" id="railNext" aria-label="Next">
+        <svg viewBox="0 0 20 20" fill="none"><path d="M3 10h13M11 4.5 16.5 10 11 15.5" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </button>
+    </div>
+  </div>
+
+  <div class="rail" id="rail">
+    <article class="card" data-tilt>
+      <div class="card__media tex--clay"><span class="card__badge">New</span><span class="card__num">01</span></div>
+      <div class="card__row"><h3>The Kurta</h3><span>₹ 4,800</span></div>
+      <p class="card__meta">Handloom cotton · Clay</p>
+    </article>
+    <article class="card" data-tilt>
+      <div class="card__media tex--indigo"><span class="card__num">02</span></div>
+      <div class="card__row"><h3>The Overshirt</h3><span>₹ 5,600</span></div>
+      <p class="card__meta">Khadi · Natural indigo</p>
+    </article>
+    <article class="card" data-tilt>
+      <div class="card__media tex--sage"><span class="card__num">03</span></div>
+      <div class="card__row"><h3>The Dhoti Trouser</h3><span>₹ 4,200</span></div>
+      <p class="card__meta">Cotton silk · Sage</p>
+    </article>
+    <article class="card" data-tilt>
+      <div class="card__media tex--saffron"><span class="card__num">04</span></div>
+      <div class="card__row"><h3>The Nehru Jacket</h3><span>₹ 7,900</span></div>
+      <p class="card__meta">Wool blend · Saffron</p>
+    </article>
+    <article class="card" data-tilt>
+      <div class="card__media tex--ink"><span class="card__badge">Limited</span><span class="card__num">05</span></div>
+      <div class="card__row"><h3>The Silk Scarf</h3><span>₹ 2,400</span></div>
+      <p class="card__meta">Mulberry silk · Ink</p>
+    </article>
+    <article class="card" data-tilt>
+      <div class="card__media tex--rose"><span class="card__num">06</span></div>
+      <div class="card__row"><h3>The Linen Shirt</h3><span>₹ 4,600</span></div>
+      <p class="card__meta">European linen · Rose</p>
+    </article>
+    <article class="card" data-tilt>
+      <div class="card__media tex--moss"><span class="card__num">07</span></div>
+      <div class="card__row"><h3>The Wool Shawl</h3><span>₹ 6,800</span></div>
+      <p class="card__meta">Merino · Moss</p>
+    </article>
+    <article class="card" data-tilt>
+      <div class="card__media tex--sand"><span class="card__num">08</span></div>
+      <div class="card__row"><h3>The Khadi Tee</h3><span>₹ 1,900</span></div>
+      <p class="card__meta">Handspun khadi · Sand</p>
+    </article>
+  </div>
+  <p class="rail__hint">Drag or scroll sideways →</p>
+</section>
+
+<!-- ================= HISTORY / CAMERA ================= -->
+<section class="history" id="story">
+  <div class="history__head">
+    <span class="label" data-reveal>06 — Our Story</span>
+    <h2 class="display display--lg history__title" data-reveal>
+      <span class="line"><span>Since 2014,</span></span>
+      <span class="line"><span>clothing that awakens</span></span>
+      <span class="line"><span><em>stories.</em></span></span>
+    </h2>
+    <p class="history__copy" data-reveal>Saksham began in a two-room studio in Jaipur with one loom, two weavers and a stubborn belief that clothes should be made slowly. Today the studio works with forty artisans across Rajasthan — and still keeps the first loom by the door.</p>
+  </div>
+
+  <div class="camera" id="camera">
+    <div class="camera__ring"></div>
+    <div class="camera__ring camera__ring--2"></div>
+    <div class="camera__core">
+      <span class="label">The archive</span>
+      <b>12</b>
+      <span class="camera__sub">years of cloth</span>
+    </div>
+    <ul class="camera__items">
+      <li class="camera__item" data-caption="The first loom, 2014"><span class="tex tex--clay"></span></li>
+      <li class="camera__item" data-caption="Indigo vat no. 3"><span class="tex tex--indigo"></span></li>
+      <li class="camera__item" data-caption="Bagru block library"><span class="tex tex--sage"></span></li>
+      <li class="camera__item" data-caption="The 2018 khadi capsule"><span class="tex tex--saffron"></span></li>
+      <li class="camera__item" data-caption="Silk reeling, Bihar"><span class="tex tex--ink"></span></li>
+      <li class="camera__item" data-caption="The repair counter"><span class="tex tex--rose"></span></li>
+    </ul>
+    <div class="camera__caption" id="cameraCaption">The first loom, 2014</div>
+  </div>
+</section>
+
+<!-- ================= JOURNEY / TABS ================= -->
+<section class="journey" id="fabric">
+  <div class="journey__head">
+    <span class="label" data-reveal>07 — From fibre to form</span>
+    <h2 class="display display--lg" data-reveal><span class="line"><span>The journey of</span></span><span class="line"><span>a <em>garment.</em></span></span></h2>
+  </div>
+
+  <div class="journey__body">
+    <div class="journey__tabs" role="tablist" aria-label="Garment journey">
+      <button class="journey__tab is-active" role="tab" aria-selected="true" data-tab="0"><span>01</span>Origin</button>
+      <button class="journey__tab" role="tab" aria-selected="false" data-tab="1"><span>02</span>Weave</button>
+      <button class="journey__tab" role="tab" aria-selected="false" data-tab="2"><span>03</span>Dye</button>
+      <button class="journey__tab" role="tab" aria-selected="false" data-tab="3"><span>04</span>Wear</button>
+    </div>
+
+    <div class="journey__panels">
+      <div class="journey__panel is-active" data-panel="0">
+        <div class="journey__visual tex--clay"><span class="journey__visual-word">Origin</span></div>
+        <div class="journey__panel-text">
+          <h3>It starts in the field.</h3>
+          <p>We buy cotton and silk directly from growers in Gujarat and Bihar, paying above market so the fibre can be grown slowly and picked by hand.</p>
+          <ul class="journey__facts"><li>Direct trade</li><li>Rain-fed cotton</li><li>No middlemen</li></ul>
+        </div>
+      </div>
+      <div class="journey__panel" data-panel="1">
+        <div class="journey__visual tex--indigo"><span class="journey__visual-word">Weave</span></div>
+        <div class="journey__panel-text">
+          <h3>The loom sets the pace.</h3>
+          <p>A single metre of our handloom takes a weaver a full day. The slight irregularity you can feel is the proof that a person, not a machine, made it.</p>
+          <ul class="journey__facts"><li>Wooden pit looms</li><li>40 artisans</li><li>1 metre / day</li></ul>
+        </div>
+      </div>
+      <div class="journey__panel" data-panel="2">
+        <div class="journey__visual tex--sage"><span class="journey__visual-word">Dye</span></div>
+        <div class="journey__panel-text">
+          <h3>Colour from the ground.</h3>
+          <p>Indigo, madder and pomegranate are fermented in open vats. Every batch shifts with the weather, which is why no two Saksham pieces are identical.</p>
+          <ul class="journey__facts"><li>Natural dyes</li><li>Sun-fixed</li><li>Zero synthetic colour</li></ul>
+        </div>
+      </div>
+      <div class="journey__panel" data-panel="3">
+        <div class="journey__visual tex--saffron"><span class="journey__visual-word">Wear</span></div>
+        <div class="journey__panel-text">
+          <h3>Then it becomes yours.</h3>
+          <p>We repair any Saksham garment for life. Bring it back faded, mended or worn thin — we will patch it, re-dye it, and send it home again.</p>
+          <ul class="journey__facts"><li>Lifetime repairs</li><li>Free alterations</li><li>Take-back programme</li></ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= JOURNAL ================= -->
+<section class="journal" id="journal">
+  <div class="journal__head">
+    <div>
+      <span class="label" data-reveal>08 — The Journal</span>
+      <h2 class="display display--lg" data-reveal><span class="line"><span>Notes on cloth,</span></span><span class="line"><span>craft and <em>care.</em></span></span></h2>
+    </div>
+    <a class="link-arrow" href="#" data-reveal data-cursor="Read"><span>All stories</span><i aria-hidden="true"></i></a>
+  </div>
+
+  <div class="journal__grid">
+    <a class="post" href="#" data-cursor="Read">
+      <div class="post__media tex--indigo"><span class="post__tag">Craft</span></div>
+      <div class="post__meta"><span>12 Jan 2026</span><span>6 min</span></div>
+      <h3>Inside the indigo vat: three days that change a colour</h3>
+      <span class="post__arrow" aria-hidden="true"></span>
+    </a>
+    <a class="post" href="#" data-cursor="Read">
+      <div class="post__media tex--sage"><span class="post__tag">Makers</span></div>
+      <div class="post__meta"><span>04 Dec 2025</span><span>8 min</span></div>
+      <h3>The last block carvers of Bagru, and why we buy their tools</h3>
+      <span class="post__arrow" aria-hidden="true"></span>
+    </a>
+    <a class="post" href="#" data-cursor="Read">
+      <div class="post__media tex--clay"><span class="post__tag">Care</span></div>
+      <div class="post__meta"><span>21 Nov 2025</span><span>4 min</span></div>
+      <h3>How to wash handloom so it gets better with age</h3>
+      <span class="post__arrow" aria-hidden="true"></span>
+    </a>
+  </div>
+</section>
+
+<!-- ================= CTA ================= -->
+<section class="cta" id="contact">
+  <div class="cta__inner">
+    <span class="label" data-reveal>09 — Visit the studio</span>
+    <h2 class="cta__title" data-reveal>
+      <span class="line"><span>Come feel</span></span>
+      <span class="line"><span>the <em>cloth.</em></span></span>
+    </h2>
+    <p class="cta__copy" data-reveal>Open Tuesday to Saturday, 11am – 7pm. Tea is always on. Book a fitting or just come and watch the looms.</p>
+    <a class="pill pill--light" href="mailto:hello@saksham.studio" data-reveal data-cursor="Write">
+      <span class="pill__txt">Book a visit</span>
+      <span class="pill__ico" aria-hidden="true">
+        <svg viewBox="0 0 20 20" fill="none"><path d="M3 10h13M11 4.5 16.5 10 11 15.5" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </span>
+    </a>
+  </div>
+  <div class="cta__grain" aria-hidden="true"></div>
+</section>
+
+<!-- ================= FOOTER ================= -->
+<footer class="site-footer">
+  <div class="site-footer__top">
+    <div class="site-footer__brand">
+      <span class="site-footer__mark">Saksham</span>
+      <p>Clothing with soul.<br />Jaipur, India — since 2014.</p>
+    </div>
+    <div class="site-footer__cols">
+      <div class="site-footer__col">
+        <span class="label">Shop</span>
+        <a href="#collection">Collection</a>
+        <a href="#collection">The Kurta</a>
+        <a href="#collection">Nehru Jacket</a>
+        <a href="#collection">Gift card</a>
+      </div>
+      <div class="site-footer__col">
+        <span class="label">Studio</span>
+        <a href="#atelier">Atelier</a>
+        <a href="#story">Our story</a>
+        <a href="#fabric">Fabric</a>
+        <a href="#journal">Journal</a>
+      </div>
+      <div class="site-footer__col">
+        <span class="label">Care</span>
+        <a href="#">Repairs</a>
+        <a href="#">Shipping</a>
+        <a href="#">Returns</a>
+        <a href="#">Contact</a>
+        <a href="auth.html">Account</a>
+      </div>
+      <div class="site-footer__col">
+        <span class="label">Follow</span>
+        <a href="https://instagram.com/ugcsamex" target="_blank" rel="noopener noreferrer">Instagram</a>
+        <a href="#">Pinterest</a>
+        <a href="#">Newsletter</a>
+      </div>
+    </div>
+  </div>
+  <div class="site-footer__bottom">
+    <span>© 2026 Saksham Studio. All rights reserved.</span>
+    <span>Privacy · Terms · Cookies</span>
+    <button class="to-top" id="toTop">Back to top ↑</button>
+  </div>
+</footer>
+
+<script type="importmap">
+{
+  "imports": {
+    "three": "https://cdn.jsdelivr.net/npm/three@0.161.0/build/three.module.js"
+  }
+}
+</script>
+<script type="module" src="js/suit3d.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>
